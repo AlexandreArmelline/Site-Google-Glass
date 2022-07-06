@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var chuchu = false
+
+        function mudaLuz(tipo) {
+           
+          if (!chuchu) {
+                if (tipo == 3) {
+                    document.getElementById("Luz").src= "../_imagens/lampada-quebrada.jpg";
+                }
+                
+                if (tipo == 1) {
+                    document.getElementById("Luz").src= "../_imagens/lampada-acesa.jpg";
+                }
+                if (tipo == 2) {
+                    document.getElementById("Luz").src= "../_imagens/lampada-apagada.jpg";
+                }
+                if (tipo == 3) {
+                    chuchu = true;
+                 }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <h1>Acenda a lâmpada</h1>
+    <img src="../_imagens/lampada-apagada.jpg" id="Luz" onmousemove="mudaLuz(1)"  onmouseout="mudaLuz(2)" onclick="mudaLuz(3)" alt="">
+</body> 
+</html>
